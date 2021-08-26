@@ -11,8 +11,8 @@ const app = express();
 
 
 //Settings
-app.set('host',process.env.HOST || '0.0.0.0');
-app.set('port', process.env.PORT || 5000);
+//pp.set('host',process.env.HOST || '0.0.0.0');
+const PORT = process.env.PORT || 5000;
 //Middlewares
 
 //Global Variables
@@ -40,7 +40,7 @@ app.use('/api/results',require('./routes/results.routes'));
 
 
 // Server is listenning
-app.listen(app.get('port'),app.get('host'),()=>{
-    console.log('Server on port',app.get('port'));
+app.listen(PORT,()=>{
+    console.log('Server on port',PORT);
 });
 
