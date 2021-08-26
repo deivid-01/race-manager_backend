@@ -19,7 +19,7 @@ app.set('port', process.env.PORT || 5000);
 app.use(fileupload())
 app.use(morgan('dev'));
 app.use(express.json()); //Get json data
-app.use(cors({origin: 'http://localhost:3000'}));
+app.use(cors());
 
 //Routes
 app.use('/api/waypoints',require('./routes/waypoint.routes'));
@@ -36,10 +36,6 @@ app.use('/api/results',require('./routes/results.routes'));
 //Static FIles
 
 
-if( process.env.NODE_ENV == "production")
-{
-    app.use(express.static("frontend/build"));
-}
 
 
 
