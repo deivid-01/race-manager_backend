@@ -1,11 +1,11 @@
 {
-  "name": "backend",
+  "name": "api-racemanager",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/index.js",
-    "start": "node index.js"
+    "prod": "node src/index.js"
   },
   "keywords": [],
   "author": "",
